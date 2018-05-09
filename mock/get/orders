@@ -1,0 +1,19 @@
+{
+  "order": {
+    "orderType": 1,
+    "orderState": 1,
+    "No": "FD2736262718292",
+    "createTime": "2017-08-19 17:30",
+    "price": 345,
+    "points": 120,
+    "favorable": 0,
+    "discount": 0,
+    "freight": 0,
+    "actualPay": 0,
+    "title": "直播的名称显示全直播的名称显示全实验中学第一届拔河比赛总决赛",
+    "img": "http://img2.pcauto.com.cn/pcauto/1001/11/1072497_1071892_image003_thumb.jpg",
+    "date": "1503142200",
+    "subType": 2,
+    "des": "退款原因/下单信息 具体内容退款原因/下单信息订单详情——开始时间订单详情——图片订单详情--标题"
+  }
+}

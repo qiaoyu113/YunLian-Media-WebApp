@@ -1,0 +1,23 @@
+{
+    "listImg": [{
+        "img": "../src/assets/excel.png",
+        "url": "/invite",
+        "type": "1"
+    }, {
+        "img": "../src/assets/excel.png",
+        "url": "/invite",
+        "type": "1"
+    }, {
+        "img": "../src/assets/excel.png",
+        "url": "/invite",
+        "type": "1"
+    }, {
+        "img": "../src/assets/excel.png",
+        "url": "/invite",
+        "type": "1"
+    }, {
+        "img": "../src/assets/excel.png",
+        "url": "/invite",
+        "type": "1"
+    }]
+}

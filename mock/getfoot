@@ -1,0 +1,33 @@
+{
+    "listFoot": [{
+        "url": "/",
+        "namea":"home",
+        "active": true,
+        "name": "首页",
+        "type": "1"
+    }, {
+        "url": "/activity",
+        "namea":"activity",
+        "active": false,
+        "name": "活动",
+        "type": "1"
+    }, {
+        "url": "/knowledge",
+        "namea":"knowledge",
+        "active": false,
+        "name": "知识",
+        "type": "1"
+    },  {
+        "url": "/article",
+        "namea":"article",
+        "active": false,
+        "name": "文章",
+        "type": "1"
+    }, {
+        "url": "/person",
+        "namea":"person",
+        "active": false,
+        "name": "我的",
+        "type": "1"
+    }]
+}

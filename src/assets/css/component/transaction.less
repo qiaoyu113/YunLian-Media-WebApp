@@ -1,0 +1,122 @@
+/*Less by LXH*/
+@import "../icon/iconfont.css";
+@bodyBgColor:#f9f9f9;
+@baseBlue:#69f;
+@desColor:#666;
+@font5:0.1333rem;/* 5px */
+@font6:0.16rem;/* 6px */
+@font7:0.1867rem;/* 7px */
+@font10:0.2667rem;/* 10px */
+@font13:0.3467rem;/* 13px */
+@font14:0.3733rem;/* 14px */
+@font15:0.4rem;/* 15px */
+@font16:0.4267rem;/* 16px */
+@font17:0.4533rem;/* 17px */
+@font18:0.48rem;/* 18px */
+@font20:0.5333rem;/* 20px */
+@font22:0.5867rem;/* 22px */
+@font25:0.6667rem;/* 25px */
+@font28:0.7467rem;/* 28px */
+@font30:0.8rem;/* 30px */
+@font33:0.88rem;/* 33px */
+@font34:0.9067rem;/* 34px */
+@font36:0.96rem;/* 36px */
+@font40:1.0667rem;/* 40px */
+@font44:1.1733rem;/* 44px */
+@font45:1.2rem; /* 45px */
+@font50:1.3333rem;/* 50px */
+@font69:1.84rem;/* 69px */
+@font77:2.0533rem;/* 77px */
+@font80:2.1333rem;/* 80px */
+@font100:2.6667rem;/* 100px */
+@font120:3.2rem;/* 120px */
+@font335:8.9333rem;/* 335px */
+
+body{background:@bodyBgColor;}
+.live-trade-detail{
+  width:100%;height:100%;max-width:450px;
+  .type-block{
+    width:100%;height:100%;
+    .top{height:@font44;line-height:@font44;text-align:center;font-size: @font18;color: #333;letter-spacing: 0.3px;position:relative;background:#fff;border-bottom:1px solid rgba(221,221,221,.5);
+      .icon-fanhui{font-size:.6933rem;color:#999;text-align:left;position:absolute;top:0;left:@font10;}
+    }
+    .remain{height:@font33;line-height:@font33;font-size:@font13;color:@baseBlue;background: #F0F7FF;border-bottom:1px solid #D3DCE6;}
+    .middle{padding-bottom:@font20;position:absolute;left:0;right:0;bottom:@font50;overflow-y:auto;-webkit-overflow-scrolling: touch;
+      .block{padding:@font10 @font20 @font20;margin-top:@font5;background:#fff;
+        .fontStyle{ .fontStyle1;text-align:left;line-height:@font22;margin-bottom:@font10;}
+        .subGrey{line-height:@font20;font-size:@font14;color:@desColor;text-align:left;}
+        .marBotSmall{margin-bottom:@font5;}
+      }
+      .det{
+        .tit{line-height:@font20;font-size: @font14;color:#333;text-align:left;margin-bottom:@font10;
+          .red{color:#f00;}
+          .blue{font-size:@font16;color:@baseBlue;}
+        }
+        .tit.clear{margin-bottom:@font5;}
+        .des{line-height:@font18;font-size: @font13;color:#333;text-align:left;}
+        .uInfo{line-height:@font20;margin-bottom: @font5;color:#333;font-weight: bold;text-align:left;
+          .big{font-size: @font14;margin-right: @font20;}
+          .normal{font-size: @font13;}
+        }
+        .bot{line-height:@font18;margin-top:@font22;padding-top:@font15;border-top:1px solid #eee;display:flex;justify-content: space-between;
+          .txt-lab{font-size:@font13;color:#333;}
+          .txt-price{font-size:@font15;color:@baseBlue;font-weight:bold;}
+          .txt-price.black{color:#333;}
+        }
+        .bot.marClear{margin-top:0;margin-bottom:@font10;padding-top:0;border-top:none;}
+        .bot.marClearZero{margin-top:0;padding-top:0;border-top:none;}
+        .pointSwitch{display:flex;justify-content: space-between; align-items: center;
+          .ps-left{font-size: @font13;color: #333;}
+          .ps-right{width:@font50;height: @font30;display:block;-webkit-border-radius: @font40;-moz-border-radius: @font45;border-radius: @font45;
+            -webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;
+            i{width: .7467rem;height: .7467rem;background:#fff;display:block;-webkit-border-radius:100%;-moz-border-radius:100%;border-radius:100%;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+          }
+          .ps-right.switch-off{background:#fff;border:.0267rem solid #eee;
+            i{margin-left:.0533rem;border:.0267rem solid #eee;/*box-shadow:0 0 .1333rem #eee;*/}
+          }
+          .ps-right.switch-on{background:#44DB5E;
+            i{margin-top:.0267rem;margin-right:.0533rem;float:right;}
+          }
+        }
+        .text-area{width: @font335;height: @font80;padding:@font10;font-size: @font16;color: #333;outline:none;resize:none; border: 1px solid #ddd;letter-spacing: 0.27px;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+        .pay-title{margin:@font13 0 @font5;font-size:@font13; color:#333;}
+        .pay-time{line-height:@font40;font-size: @font28;font-weight:bold;color: #333;}
+      }
+      .payTxt{font-size:@font13;color:#999;}
+      .payMet{line-height:@font25;
+        label{display:flex;justify-content: space-between;align-items:center;}
+        input[type=radio]{width:@font16;height: @font16;}
+        .iconfont{font-size:@font22;margin-right: @font6;}
+        .icon-icon_weixinzhifu{color:#41B035;}
+        .icon-icon_zhifubao{color:#19A0E5;}
+        .payLeft{display:flex;align-items:center;}
+      }
+      .payMet.mar1{margin:@font5 0 @font20;}
+      .payMet.mar2{margin-bottom:-@font5;}
+      .payTxt.singleTit{margin: @font17 @font20 @font7;text-align:left;}
+      .return-btnBig{width:@font335;height:@font45;line-height:@font45; margin:@font40 auto 0; font-size:@font16; .btnStyle(#69f,#fff);border-radius:@font100;}
+      .e-ticket-block{display:flex;justify-content: space-between;align-items: center;
+       .iconfont{font-size:@font40;color:#999;}
+      }
+      .marBotNeg{margin-bottom:-.2667rem!important;}
+    }
+    .middle::-webkit-scrollbar{width:0;height:0;}
+    .waiting{top:@font77;}
+    .confirm{top:@font44;}
+    .conFull{bottom:0;}
+    .bottom{max-width:450px;margin:0 auto;height:@font50;background:#fff;display:flex;justify-content: flex-end;align-items:center;position:fixed;bottom:0;left:0;right:0;
+      .btn{width:@font120;height:@font50;line-height: @font50;text-align:center;font-size:@font16;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+      .cancel{.btnStyle(#F0F7FF,#69f);border-top:1px solid #C0CCDA;}
+      .ok{ .btnStyle(#69f,#fff)}
+      .txt{line-height: @font50;margin-right: @font36;font-size:@font16;color:#333;}
+      .return{width: @font80;height: @font34;line-height: @font34;text-align:center;border:1px solid @baseBlue;font-size: @font14;color:@baseBlue;-webkit-border-radius: @font69;-moz-border-radius: @font69;border-radius: @font69;}
+      .return.mar{margin-right:@font20;}
+    }
+  }
+}
+.fontStyle1(@size:@font16,@color:#69f){
+   font-size:@size;color:@color;
+}
+.btnStyle(@bgColor:#fff;@color:#333){
+  background:@bgColor;color:@color;
+}

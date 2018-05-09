@@ -1,0 +1,158 @@
+/*Less by LXH*/
+@import "../icon/iconfont.css";
+@fontSizeBig:18px;
+@fontSizeNormal:14px;
+@fontSizeSmall:12px;
+@fontSizeSmaller:11px;
+// px与rem的值的对应
+@size1: .0267rem;
+@size2: .0533rem;
+@size3: .08rem;
+@size4: .1067rem;
+@size9: .24rem;
+@size10: .2667rem;
+@size11: .2933rem;
+@size12: .32rem;
+@size14: .3733rem;
+@size15: .4rem;
+@size16: .4rem;
+@size18: .48rem;
+@size20: .5333rem;
+@size21: .56rem;
+@size22: .5867rem;
+@size24: .64rem;
+@size25: .6667rem;
+@size28: .7467rem;
+@size33: .88rem;
+@size36: .96rem;
+@size40: 1.0667rem;
+@size44: 1.1733rem;
+@size50: 1.3333rem;
+@size53: 1.4133rem;
+@size76: 2.0267rem;
+@size98: 2.6133rem;
+@size120: 3.2rem;
+@size135: 3.6rem;
+@size150: 4rem;
+@size200: 5.3333rem;
+@size295: 7.8667rem;
+@size375: 10rem;
+
+
+@colorWX:#82D349;
+@colorQQ:#69CCFF;
+@colorWeibo:#F3595C;
+@colorPC:#88C3FF;
+/* 蓝色调登录注册 */
+@btnBgColor:#69f;
+@btnColor:#fff;
+@btnBorColor:#389BFF;
+@mainColor:#69f;
+/* 绿色调登录注册 */
+/*@btnBgColor:#6D9E4B;
+@btnColor:#fff;
+@btnBorColor:#439842;
+@mainColor:#6D9E4B;*/
+/* 红色调登录注册 */
+/*@btnBgColor:#F3595C;
+@btnColor:#fff;
+@btnBorColor:#F3595C;*/
+/* 黄色调登录注册 */
+/*@btnBgColor:#fc0;
+@btnColor:#333;
+@btnBorColor:#fc0;*/
+/*@mainColor:#333; 红色和黄色按钮组合需要*/
+
+
+
+
+*{margin:0;padding:0;}
+.login{
+  width: @size375;
+  height:100%;
+  padding:0 @size15;
+  display:flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.login{
+  .login-close{width:100%;height: @size28;margin:@size24 @size25;display:flex;justify-content:flex-end;}
+  .login-close{
+    .icon-guanbi2{font-size: @size24;color:#C0CCDA;}
+  }
+  .login-form{}
+  .login-form{
+    .login-title{margin-bottom: @size40;font-size: @size18;color: #5E6D82;text-align:center;}
+    .item{margin-bottom: @size15;position:relative;}
+    .item{
+      .form-ipt{width: @size295;height: @size44;padding: @size4 @size10;font-size: @size14;color:#333; border:1px solid #ddd;-webkit-appearance:none; /* 解决ios文本框上阴影 */outline:none;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+      .form-btn{width: @size295;height: @size44;line-height: @size44;font-size: @size18;text-align:center;letter-spacing: 1px;border:none;outline:none;/*.btnStyle(@btnColor,@btnBgColor,@btnBorColor);*/-webkit-border-radius: @size50;-moz-border-radius: @size50;border-radius: @size50;}
+      .form-btn-enable{.btnStyle(#fff,#bbb,#bbb)}
+      .iconfont{font-size: @size18;/*color:#E5E9F2;*/position:absolute;top: @size12;right: @size10;}
+      .namePwd{.iptPaddingRight(@size40);}
+      .validatePhone{.iptPaddingRight(@size150);}
+      .validateFromPhone{/*color:@mainColor;*/position:absolute;top: 0;right:0;bottom:0;padding-right:@size15;/*width: @size120;*/height: @size44;line-height: @size44;font-size: @size14;text-align:center;
+        display:flex; align-items:center;
+        .mid-line{height:@size22;margin-right: @size15;border-left:1px solid #E5E9F2;}
+      }
+      .validateWaiting{color:#C0CCDA;}
+      .validateIpt{width: @size135;padding-right: @size28;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;;box-sizing: border-box;}
+      .validateImg{width: @size98;height: @size44;}
+      .validateImg{
+        img{width:100%;height:100%;}
+      }
+      .kapIcon{position:relative;}
+      .icon-yanjing,.icon-biyan,.icon-Shape{color:#E5E9F2;}
+    }
+    .validateItem{display:flex;justify-content:space-between;}
+    .validateItem{
+      .iconfont{width: @size18;height: @size21;margin-left: @size10;display:block;}
+      .icon-shuaxin1{/*color:@mainColor;*/}
+      .icon-yes{color: @colorWX; display: none;}
+    }
+    .argument-item,.forget-item{margin:-@size3 0 @size16;display:flex;align-items:center;}
+    .argument-item{justify-content: flex-start;}
+    .forget-item{justify-content: flex-end;}
+    .argument{height: @size16;font-size: @size12;color: #475669;display:flex;align-items: center;justify-content: flex-start;
+      input[type=checkbox]{width:0;height:0;float: left;margin: @size1 @size2 0 0;}
+      .iconfont{position: static;}
+      .icon-duoxuan_xuanzhong_shixin{color:#69f;font-size:18px;}
+      .icon-duoxuan_moren{color:#ddd;display:none;}
+    }
+    .argumentItem,.forgetPwd{/*color: #69f;*/}
+    .argumentItem{font-size: @size12;}
+    .forgetPwd{font-size: @size14;}
+    .btn-under{margin-bottom: @size50;font-size: @size14;text-align:center;}
+    .blank{height:9px;}
+    /* 微信二维码 */
+    .canvas{width: @size200;height: @size200;padding: @size10;margin:0 auto;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+    .canvas-des{margin:@size15 0 @size40;line-height: @size20;font-size: @size14;color: #999;}
+  }
+  .loginType{width:@size295;margin:0 auto;display:flex;justify-content: space-around;/*justify-content: space-between;*/align-items:flex-end;align-self:flex-end;}
+  .loginType{
+    .item{height: @size76;}
+    .item{
+      .iconfont{width: @size50;height: @size53;line-height: @size53;text-align:center;display:block;}
+      .wx{color:@colorWX;font-size: @size40;}
+      .qq{color:@colorQQ;font-size: @size33;}
+      .wb{color:@colorWeibo;font-size: @size50;}
+      .mm{color:@colorPC;font-size: @size36;}
+      span{width:100%;line-height: @size12;font-size: @size11;color: #666;text-align:center;display:block;}
+    }
+  }
+}
+.hide{display:none;}
+/* 方法类 */
+.borderStyle(@x:1px,@style:solid,@color:#ddd){
+  border:@arguments;
+}
+.btnStyle(@color:#fff,@bgColor:#69f,@borderColor:#389BFF){
+  color:@color;background:@bgColor; .borderStyle(1px,solid,@borderColor);   /*border:1px solid @borderColor;*/
+}
+.iptPaddingRight(@value: @size10){
+  padding-right:@value;
+}
+

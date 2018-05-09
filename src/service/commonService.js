@@ -40,6 +40,10 @@ export const commonService = {
     getImage:function(params){
         return axios.get('/banners' + this.getParam(params))
     },
+    /* 热门文章 */
+    getPassage:function(params){
+        return axios.get('/articles/hot' + this.getParam(params))
+    },
 
 
 

@@ -3,7 +3,7 @@
         <!--搜索-->
         <div class="find">
             <i class="iconfont icon-sousuo"></i>
-            <input type="text" class="findInput">
+            <input type="text" class="findInput" placeholder="搜索内容">
         </div>
         <!--导航栏-->
         <div class='navigationOver'>
@@ -30,6 +30,30 @@
             </div>
             <div class="swiper-pagination"></div>
         </div>
+        <!--热门文章-->
+        <div class="LivingList" v-if="nav == 0">
+            <div class="LivingTop">
+                热门文章
+                <span @click='moreAr'>更多</span>
+            </div>
+            <div class="passOver">
+                <div class="passage">
+                    <div class="passBox">
+                        <div class="passageList" v-for="item in passageList" @click="artPage(item.id)">
+                            <img :src='$store.state.picHead + item.poster'>
+                            <p>{{item.summary}}</p>
+                            <div class="passageBot">
+                                <span>{{item.classification}}</span>
+                                <span>
+                <i class='iconfont icon-yanjing'></i> {{item.readNum}}</span>
+                                <span>
+                <i class='iconfont icon-xianxingzan'></i>{{item.commentNum}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 <script type="text/ecmascript-6">
@@ -49,11 +73,8 @@
                     {name:'社群'},
                     {name:'乱七八糟'}
                 ],
-                img:[
-                    {picUrl:'group1/M00/00/89/Chui1FoeYx-AQ61BAAD-okC4m0g212.jpg'},
-                    {picUrl:'group1/M00/00/89/Chui1FoeYx-AQ61BAAD-okC4m0g212.jpg'},
-                    {picUrl:'group1/M00/00/89/Chui1FoeYx-AQ61BAAD-okC4m0g212.jpg'},
-                ]
+                img:[],
+                passageList:[],
             }
         },
         mounted () {
@@ -68,10 +89,16 @@
             commonService.getImage({type:3}).then(function(res){
                 if(res.data.success) {
                     that.img = res.data.datas
-                    console.log(that.img)
                     that.$nextTick(function () {
                         that.onswiper();
                     });
+                }
+            }),
+            //热门文章
+            commonService.getPassage().then(function(res){
+                if(res.data.success) {
+                    that.passageList = res.data.datas.datas;
+                    console.log(that.passageList)
                 }
             })
         },
@@ -102,6 +129,10 @@
                     },
                 });
             },
+            //更多文章
+            moreAr(){
+                let that = this;
+            }
         }
     }
 </script>
@@ -134,11 +165,12 @@
             float:left;
             outline: none;
             color:#999;
+            font-size:13px;
         }
     }
     .navigationOver {
         width: 100%;
-        height: 1.4rem;
+        height: 1.25rem;
         background: #fff;
         overflow: hidden;
         position: relative;
@@ -202,6 +234,99 @@
         text-overflow: ellipsis;
         white-space: nowrap;
         background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.5) 40%, rgba(0, 0, 0, 0.8) 98%, #FFFFFF 100%);
+    }
+    .LivingList {
+        width: 100%;
+        background: #fff;
+    }
+
+    .LivingTop {
+        width: 100%;
+        padding: 0.4rem;
+        font-size: 16px;
+        color: #333;
+        font-weight: 600;
+        box-sizing: border-box;
+    }
+
+    .Line {
+        margin-top: 0.35rem;
+        float: left;
+        display: inline-block;
+        width: 0.14rem;
+        height: 0.6rem;
+        margin-right: 0.3rem;
+        background-color: #20a0ff;
+    }
+
+    .LivingTop span {
+        float: right;
+        color: #666;
+        font-size: 14px;
+        font-weight: 300;
+    }
+
+    .passOver {
+        width: 100%;
+        height: 4.9rem;
+        overflow: hidden;
+    }
+
+    .passage {
+        padding-bottom: 0.26rem;
+        width: 100%;
+        overflow: auto;
+        position: relative;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .passBox {
+        overflow-x: auto;
+        position: relative;
+        overflow-y: hidden;
+        padding: 0 0 0 0.4rem;
+        width: max-content;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .passageList {
+        float: left;
+        margin-right: 0.4rem;
+        width: 5.33rem;
+        height: 5rem;
+        display: inline-block;
+    }
+
+    .passageList img {
+        width: 100%;
+        height:2.67rem;
+    }
+
+    .passageList p {
+        width: 100%;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        overflow: hidden;
+        font-size: 14px;
+        margin-top:0.2rem;
+    }
+
+    .passageList .passageBot {
+        width: 100%;
+        height: 0.5rem;
+        line-height: 0.5rem;
+    }
+
+    .passageList .passageBot span {
+        display: block;
+        font-size: 12px;
+        color: #999;
+        float: left;
+        margin-right: 0.5rem;
+    }
+    .icon-zan2{
+        font-size:12px;
     }
 }
 </style>
